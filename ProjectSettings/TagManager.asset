@@ -7,6 +7,10 @@ TagManager:
   - Anchor
   - Storage
   - Acorn
+  - Tree
+  - dialogueCanvasPrefab
+  - DialogueCanvas
+  - Dialogue Canvas
   layers:
   - Default
   - TransparentFX
