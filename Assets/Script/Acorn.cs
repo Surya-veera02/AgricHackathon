@@ -19,7 +19,7 @@ public class Acorn : MonoBehaviour
         // Spawn the arrow above the acorn
         if (arrowPrefab != null)
         {
-            arrowInstance = Instantiate(arrowPrefab, transform.position + Vector3.up * 2.0f, Quaternion.identity);
+            arrowInstance = Instantiate(arrowPrefab, transform.position + Vector3.up, Quaternion.identity);
             arrowInstance.transform.SetParent(transform); // Parent to the acorn
         }
     }
@@ -68,7 +68,7 @@ public class Acorn : MonoBehaviour
     {
         // Up and down movement
         float newY = Mathf.Sin(Time.time * moveSpeed) * moveHeight;
-        arrowInstance.transform.localPosition = new Vector3(0, 2.0f + newY, 0);
+        arrowInstance.transform.localPosition = new Vector3(0, 0.5f + newY, 0);
 
         // Left and right rotation
         arrowInstance.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
