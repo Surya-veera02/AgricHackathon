@@ -1,0 +1,33 @@
+﻿title:Begin
+tags:
+---
+
+As a lumberjack, you are cutting down trees. But deforestation has severe consequences.
+
+Forests absorb carbon dioxide and release oxygen. Without them, the planet's temperature rises faster.
+
+
+-> What are the effects?
+    <<jump EffectsResponse>>
+->What can we do to stop this?
+    <<jump PreventiveResponse>>
+
+
+
+===
+
+title:EffectsResponse
+tags:
+---
+
+Cutting trees destroys habitats, accelerates climate change, and harms biodiversity.
+
+===
+
+title:PreventiveResponse
+tags:
+---
+
+Reduce logging, plant more trees, and use sustainable practices.
+
+===
