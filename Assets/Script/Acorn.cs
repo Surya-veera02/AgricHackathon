@@ -10,7 +10,7 @@ public class Acorn : MonoBehaviour
     // Arrow animation variables
     private float moveSpeed = 1.5f; // Speed of the up-down movement
     private float moveHeight = 0.3f; // Height of the up-down movement
-    private float rotationSpeed = 50f; // Speed of the left-right rotation
+    private float rotationSpeed = 2.0f; // Speed of the left-right swing
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class Acorn : MonoBehaviour
         // Spawn the arrow above the acorn
         if (arrowPrefab != null)
         {
-            arrowInstance = Instantiate(arrowPrefab, transform.position + Vector3.up, Quaternion.identity);
+            arrowInstance = Instantiate(arrowPrefab, transform.position + Vector3.up * 0.01f, Quaternion.Euler(90, 0, 0));
             arrowInstance.transform.SetParent(transform); // Parent to the acorn
         }
     }
@@ -33,18 +33,27 @@ public class Acorn : MonoBehaviour
         }
     }
 
+    private void AnimateArrow()
+    {
+        // Up and down movement
+        float newY = Mathf.Sin(Time.time * moveSpeed) * moveHeight;
+        arrowInstance.transform.localPosition = new Vector3(0, 2.0f + newY, 0);
+
+        // Left and right rotation (around Z-axis for horizontal swing)
+        float rotationAngle = Mathf.Sin(Time.time * rotationSpeed) * 90f; // Swing between 90 degrees
+        arrowInstance.transform.localRotation = Quaternion.Euler(90, 0, rotationAngle); // Keep facing down while swinging
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Storage") && !isStored)
         {
-            // Acorn is being stored
             isStored = true;
-            rb.isKinematic = true; // Disable physics
-            transform.SetParent(other.transform); // Attach to storage
-            transform.localPosition = Vector3.zero; // Position relative to storage
-            other.GetComponent<Storage>().AddAcorn(this.gameObject); // Notify storage
+            rb.isKinematic = true;
+            transform.SetParent(other.transform);
+            transform.localPosition = Vector3.zero;
+            other.GetComponent<Storage>().AddAcorn(this.gameObject);
 
-            // Destroy the arrow when collected
             if (arrowInstance != null)
             {
                 Destroy(arrowInstance);
@@ -56,21 +65,10 @@ public class Acorn : MonoBehaviour
     {
         if (other.CompareTag("Storage") && isStored)
         {
-            // Acorn is being removed from storage
             isStored = false;
-            rb.isKinematic = false; // Re-enable physics
-            transform.SetParent(null); // Detach from storage
-            other.GetComponent<Storage>().RemoveAcorn(this.gameObject); // Notify storage
+            rb.isKinematic = false;
+            transform.SetParent(null);
+            other.GetComponent<Storage>().RemoveAcorn(this.gameObject);
         }
-    }
-
-    private void AnimateArrow()
-    {
-        // Up and down movement
-        float newY = Mathf.Sin(Time.time * moveSpeed) * moveHeight;
-        arrowInstance.transform.localPosition = new Vector3(0, 0.5f + newY, 0);
-
-        // Left and right rotation
-        arrowInstance.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
     }
 }
