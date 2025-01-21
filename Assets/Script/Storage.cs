@@ -6,10 +6,10 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Storage : MonoBehaviour
 {
-    public int storeAcorns = 5; // Maximum capacity
-    public int hideAcorn = 7;
-    private List<GameObject> storedAcorns = new List<GameObject>();
-    private List<GameObject> hideAcorns = new List<GameObject>();
+    public int storeAcorns = 5; // Maximum capacity in body
+    public int hideAcorn = 7;      //Ground capacity
+    private List<GameObject> storedAcorns = new List<GameObject>();     //list of Acorn to store in squirrel 
+    private List<GameObject> hideAcorns = new List<GameObject>();       // hide the acorns in ground
 
 
     public TMP_Text hideAcornStorage;
@@ -79,9 +79,9 @@ public class Storage : MonoBehaviour
         }
     }
 
-    public int GetAcornCount()
-    {
-        return hideAcorns.Count;
-        return storedAcorns.Count;
-    }
+    //public int GetAcornCount()
+    //{
+    //    return hideAcorns.Count;
+    //    return storedAcorns.Count;
+    //}
 }

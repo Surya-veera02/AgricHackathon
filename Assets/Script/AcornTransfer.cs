@@ -6,7 +6,7 @@ public class AcornTransfer : MonoBehaviour
     {
         if (other.CompareTag("Acorn"))
         {
-            // Logic for receiving an acorn
+            // Receiving an acorn
             other.transform.SetParent(transform); // Attach to the receiving object
             other.GetComponent<Rigidbody>().isKinematic = true; // Disable physics
             Debug.Log("Acorn transferred to new object!");
