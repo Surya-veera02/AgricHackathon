@@ -7,11 +7,11 @@ using UnityEngine.SocialPlatforms.Impl;
 public class Storage : MonoBehaviour
 {
     public int storeAcorns = 5; // Maximum capacity in body
-    public int hideAcorn = 7;      //Ground capacity
+    //public int hideAcorn = 7;      //Ground capacity
     private List<GameObject> storedAcorns = new List<GameObject>();     //list of Acorn to store in squirrel 
-    private List<GameObject> hideAcorns = new List<GameObject>();       // hide the acorns in ground
+    //private List<GameObject> hideAcorns = new List<GameObject>();       // hide the acorns in ground
 
-    public TMP_Text hideAcornStorage;
+    //public TMP_Text hideAcornStorage;
     public TMP_Text storeAcornStorage;
 
     public AudioSource AcornAudioSource;
@@ -35,18 +35,18 @@ public class Storage : MonoBehaviour
         }
 
         //Hiding the Acorns
-        if (hideAcorns.Count < hideAcorn)
-        {
-            hideAcorns.Add(acorn);
-            Debug.Log("Acorn stored! Total: " + hideAcorns.Count);
+        //if (hideAcorns.Count < hideAcorn)
+        //{
+        //    hideAcorns.Add(acorn);
+        //    Debug.Log("Acorn stored! Total: " + hideAcorns.Count);
 
-            hideAcornStorage.text = "Acorn Stored = " + hideAcorns.Count + "/" + hideAcorn;
-        }
-        else
-        {
-            Debug.Log("Storage is full!");
-            hideAcornStorage.text = "Storage Full!";
-        }
+        //    hideAcornStorage.text = "Acorn Stored = " + hideAcorns.Count + "/" + hideAcorn;
+        //}
+        //else
+        //{
+        //    Debug.Log("Storage is full!");
+        //    hideAcornStorage.text = "Storage Full!";
+        //}
     }
 
     public void RemoveAcorn(GameObject acorn)
@@ -66,18 +66,18 @@ public class Storage : MonoBehaviour
         }
 
         //Hiding Acorn
-        if (hideAcorns.Contains(acorn))
-        {
-            hideAcorns.Remove(acorn);
-            Debug.Log("Acorn removed! Remaining: " + hideAcorns.Count);
-            storeAcornStorage.text = "Acorn Collected = " + hideAcorns.Count + "/" + storeAcorns;
+        //if (hideAcorns.Contains(acorn))
+        //{
+        //    hideAcorns.Remove(acorn);
+        //    Debug.Log("Acorn removed! Remaining: " + hideAcorns.Count);
+        //    hideAcornStorage.text = "Acorn Collected = " + hideAcorns.Count + "/" + hideAcorn;
 
-        }
-        else
-        {
-            Debug.Log("Acorn not found in storage!");
-            hideAcornStorage.text = "Acorn Empty";
-        }
+        //}
+        //else
+        //{
+        //    Debug.Log("Acorn not found in storage!");
+        //    hideAcornStorage.text = "Acorn Empty";
+        //}
     }
 
     //public int GetAcornCount()

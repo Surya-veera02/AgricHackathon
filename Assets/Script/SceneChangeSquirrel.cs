@@ -10,6 +10,11 @@ public class SceneChangeSquirrel : MonoBehaviour
     public GameObject squirrelStore;       //storage of Scorn for squirrel
     public GameObject hideAcorns;           //disabling the acorn gameobject prefab
 
+    //public AudioSource endAudio;        //attaching the audio for squirrel naration
+
+    public Material newSkyboxMaterialNormal;    // Skybox material for the new scene
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -25,11 +30,31 @@ public class SceneChangeSquirrel : MonoBehaviour
                 cutTrees.SetActive(false);
                 hideAcorns.SetActive(false);
                 Debug.Log("Changed scene with to squirrel base with scene update.");
+
+                StartCoroutine(EnableEndNarrationWithDelay());
+
             }
             else
             {
                 Debug.LogWarning("SceneChange prefabs not applied in code.");
             }
+
+            if (newSkyboxMaterialNormal != null)
+            {
+                RenderSettings.skybox = newSkyboxMaterialNormal;
+                DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
+                Debug.Log("Normal Skybox changed.");
+            }
+            else
+            {
+                Debug.LogWarning("New skybox material is not assigned.");
+            }
+        }
+
+        IEnumerator EnableEndNarrationWithDelay()
+        {
+            yield return new WaitForSeconds(1.0f);
+            //endAudio.Play();
         }
     }
 }

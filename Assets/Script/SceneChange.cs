@@ -8,6 +8,8 @@ public class SceneChange : MonoBehaviour
     public GameObject chainsaw;         //chainsaw gameobject enabling
     public GameObject squirrelStore;       //storage of Scorn for squirrel
 
+    public Material newSkyboxMaterialWinter;    // Skybox material for the new scene
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -27,6 +29,17 @@ public class SceneChange : MonoBehaviour
             {
                 Debug.LogWarning("Chainsaw GameObject is not assigned.");
             }
+        }
+
+        if (newSkyboxMaterialWinter != null)
+        {
+            RenderSettings.skybox = newSkyboxMaterialWinter;
+            DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
+            Debug.Log("Winter Skybox changed.");
+        }
+        else
+        {
+            Debug.LogWarning("New skybox material is not assigned.");
         }
 
         IEnumerator EnableChainsawWithDelay()
