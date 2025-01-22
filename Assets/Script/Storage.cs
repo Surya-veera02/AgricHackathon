@@ -11,10 +11,10 @@ public class Storage : MonoBehaviour
     private List<GameObject> storedAcorns = new List<GameObject>();     //list of Acorn to store in squirrel 
     private List<GameObject> hideAcorns = new List<GameObject>();       // hide the acorns in ground
 
-
     public TMP_Text hideAcornStorage;
     public TMP_Text storeAcornStorage;
 
+    public AudioSource AcornAudioSource;
 
     public void AddAcorn(GameObject acorn)
     {
@@ -24,6 +24,7 @@ public class Storage : MonoBehaviour
         {
             storedAcorns.Add(acorn);
             Debug.Log("Acorn stored! Total: " + storedAcorns.Count);
+            AcornAudioSource.Play();                                    //sound enabled
 
             storeAcornStorage.text = "Acorn Collected = " + storedAcorns.Count + "/" + storeAcorns;
         }
@@ -56,7 +57,7 @@ public class Storage : MonoBehaviour
             storedAcorns.Remove(acorn);
             Debug.Log("Acorn removed! Remaining: " + storedAcorns.Count);
             storeAcornStorage.text = "Acorn Collected = " + storedAcorns.Count + "/" + storeAcorns;
-
+            AcornAudioSource.Play();                                //sound enabled
         }
         else
         {
