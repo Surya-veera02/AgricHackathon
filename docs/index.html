@@ -4,127 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Change VR Game</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8f0;
-            color: #2c3e50;
-        }
-
-        header {
-            background-color: #2ecc71;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .hero {
-            background: url('forest_background.jpg') no-repeat center center/cover;
-            height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            color: #27ae60;
-            margin-bottom: 10px;
-        }
-
-        .video {
-            text-align: center;
-        }
-
-        .video iframe {
-            width: 80%;
-            height: 400px;
-            border: none;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        a {
-            color: #27ae60;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .video iframe {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Climate Change VR Game",
+      "description": "Experience the world through a squirrel's perspective and learn about their role in forest regeneration and climate change mitigation.",
+      "url": "https://your-website-url.com",
+      "author": {
+        "@type": "Person",
+        "name": "Your Name"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Your Organization"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
         <h1>Climate Change VR Game</h1>
-        <p>Experience nature like never before and learn how small actions can make a big difference.</p>
+        <nav>
+            <a href="#about">About the Game</a>
+            <a href="#squirrel-impact">Squirrels & Climate Change</a>
+            <a href="#video">Watch Video</a>
+            <a href="#download">Download</a>
+        </nav>
     </header>
 
-    <div class="hero">
-        <h1>Step into a Squirrel's World</h1>
-    </div>
-
-    <div class="container">
-        <!-- About the Game Section -->
-        <div class="section" id="about">
-            <h2>About the Game</h2>
-            <p>Our VR game takes you on a unique journey, experiencing life through the eyes of a squirrel. Collect acorns, climb trees, and store nuts to survive the winter while learning about the impact of deforestation and climate change.</p>
+    <section id="hero">
+        <img src="SquirrelGame.jpg" alt="Forest Background">
+        <div class="hero-text">
+            <h2>Experience the World Through a Squirrel's Eyes</h2>
+            <p>Embark on an educational VR journey to understand the vital role of squirrels in our ecosystem.</p>
         </div>
+    </section>
 
-        <!-- Educational Resources Section -->
-        <div class="section" id="education">
-            <h2>Educational Resources</h2>
-            <p>Did you know? Forests absorb nearly 2.6 billion tons of carbon dioxide every year, helping combat climate change. By planting trees and protecting natural habitats, we can preserve ecosystems and create a sustainable future.</p>
-        </div>
+    <section id="about" class="container">
+        <h2>About the Game</h2>
+        <p>Our VR game offers an immersive experience where players navigate the world as a squirrel. You'll learn about the behaviors of squirrels, including their nut-burying habits, and how these actions contribute to forest health and climate change mitigation.</p>
+    </section>
 
-        <!-- Video Section -->
-        <div class="section video" id="video">
-            <h2>Watch the Trailer</h2>
-            <iframe src="https://www.youtube.com/embed/your_video_id" allowfullscreen></iframe>
-        </div>
+    <section id="squirrel-impact" class="container">
+        <h2>Squirrels & Climate Change</h2>
+        <p>Squirrels, especially species like the Eastern gray squirrel, play a crucial role in forest ecosystems through their behavior of burying nuts and seeds—a practice known as scatter-hoarding. This activity not only ensures their survival during scarce periods but also significantly contributes to forest regeneration and climate change mitigation.</p>
+        <p><strong>Forest Regeneration:</strong> Squirrels bury numerous nuts and seeds, some of which they fail to retrieve. These forgotten caches have the potential to germinate and grow into new trees, thereby aiding in natural reforestation efforts. This process supports biodiversity and helps maintain healthy forest ecosystems.</p>
+        <p><strong>Climate Change Mitigation:</strong> The growth of new trees from these buried seeds enhances carbon sequestration, as trees absorb carbon dioxide from the atmosphere. By facilitating the spread and growth of trees, squirrels indirectly contribute to reducing greenhouse gas concentrations, playing a subtle yet important role in combating climate change.</p>
+    </section>
 
-        <!-- Download/Play Section -->
-        <div class="section" id="download">
-            <h2>Play the Game</h2>
-            <p>Ready to experience the adventure? <a href="#">Download the game here</a> and immerse yourself in the world of nature.</p>
-        </div>
-    </div>
+    <section id="video" class="container">
+        <h2>Watch Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="download" class="container">
+        <h2>Download the Game</h2>
+        <p>Ready to embark on this adventure? <a href="download_link">Download the game here</a> and start exploring the world through a squirrel's perspective.</p>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Climate Change VR Game. All rights reserved.</p>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
 </body>
 </html>
