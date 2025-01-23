@@ -24,22 +24,17 @@ public class SceneChange : MonoBehaviour
                 StartCoroutine(EnableChainsawWithDelay());
                 squirrelStore.SetActive(false);
                 Debug.Log("Changed scene with chainsaw prefab enabled.");
+
+                RenderSettings.skybox = newSkyboxMaterialWinter;
+                DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
+                Debug.Log("Winter Skybox changed.");
             }
             else
             {
                 Debug.LogWarning("Chainsaw GameObject is not assigned.");
-            }
-        }
 
-        if (newSkyboxMaterialWinter != null)
-        {
-            RenderSettings.skybox = newSkyboxMaterialWinter;
-            DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
-            Debug.Log("Winter Skybox changed.");
-        }
-        else
-        {
-            Debug.LogWarning("New skybox material is not assigned.");
+                Debug.LogWarning("New skybox material is not assigned.");
+            }
         }
 
         IEnumerator EnableChainsawWithDelay()
