@@ -14,7 +14,7 @@ public class NarrationTrigger : MonoBehaviour
             // Play narration audio
             if (narrationAudio != null)
             {
-                narrationAudio.pitch = 1.4f;
+                narrationAudio.pitch = 1.2f;
                 narrationAudio.Play();
                 Debug.Log("Playing narration audio.");
                 hasPlayed = true; // Ensure the narration plays only once
