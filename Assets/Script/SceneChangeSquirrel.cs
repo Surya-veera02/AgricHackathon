@@ -11,6 +11,8 @@ public class SceneChangeSquirrel : MonoBehaviour
     public GameObject hideAcorns;           //disabling the acorn gameobject prefab
     public GameObject smallTree;            // enabling a tree sapling in nut stored place
 
+    public GameObject chainsaw;         //chainsaw gameobject disable
+
     //public AudioSource endAudio;        //attaching the audio for squirrel naration
 
     public Material newSkyboxMaterialNormal;    // Skybox material for the new scene
@@ -28,6 +30,7 @@ public class SceneChangeSquirrel : MonoBehaviour
 
                 hut.SetActive(true);
                 squirrelStore.SetActive(true);
+                chainsaw.SetActive(false);
                 cutTrees.SetActive(false);
                 hideAcorns.SetActive(false);
                 smallTree.SetActive(true);
