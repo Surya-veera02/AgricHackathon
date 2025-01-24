@@ -14,8 +14,13 @@ public class SceneChange : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            //other.transform.position = new Vector3(-17, 0, -55);
+            //other.transform.rotation = Quaternion.Euler(0, 0, 0);
+
             other.transform.position = NPCSpawnPoint.position;
             other.transform.rotation = NPCSpawnPoint.rotation;
+
+            Debug.Log($"Player moved to position: {NPCSpawnPoint.position} and rotation: {NPCSpawnPoint.rotation}");
 
             if (chainsaw != null)
             {
