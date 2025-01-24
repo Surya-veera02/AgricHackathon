@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class SceneChangeSquirrel : MonoBehaviour
 {
@@ -17,44 +18,89 @@ public class SceneChangeSquirrel : MonoBehaviour
 
     public Material newSkyboxMaterialNormal;    // Skybox material for the new scene
 
+    public GameObject player;
+    public OVRScreenFade fade;
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position = NPCSpawnPoint.position;
-            other.transform.rotation = NPCSpawnPoint.rotation;
 
-            if (hut != null)
-            {
+            StartCoroutine(MovingPlayer());
 
-                hut.SetActive(true);
-                squirrelStore.SetActive(true);
-                chainsaw.SetActive(false);
-                cutTrees.SetActive(false);
-                hideAcorns.SetActive(false);
-                smallTree.SetActive(true);
-                Debug.Log("Changed scene with to squirrel base with scene update.");
 
-                StartCoroutine(EnableEndNarrationWithDelay());
+            //other.transform.position = NPCSpawnPoint.position;
+            //other.transform.rotation = NPCSpawnPoint.rotation;
 
-                RenderSettings.skybox = newSkyboxMaterialNormal;
-                DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
-                Debug.Log("Normal Skybox changed.");
+            //if (hut != null)
+            //{
 
-            }
-            else
-            {
-                Debug.LogWarning("SceneChange prefabs not applied in code.");
+            //    hut.SetActive(true);
+            //    squirrelStore.SetActive(true);
+            //    chainsaw.SetActive(false);
+            //    cutTrees.SetActive(false);
+            //    hideAcorns.SetActive(false);
+            //    smallTree.SetActive(true);
+            //    Debug.Log("Changed scene with to squirrel base with scene update.");
 
-                Debug.LogWarning("New skybox material is not assigned.");
-            }
+            //    StartCoroutine(EnableEndNarrationWithDelay());
+
+            //    RenderSettings.skybox = newSkyboxMaterialNormal;
+            //    DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
+            //    Debug.Log("Normal Skybox changed.");
+
+            //}
+            //else
+            //{
+            //    Debug.LogWarning("SceneChange prefabs not applied in code.");
+
+            //    Debug.LogWarning("New skybox material is not assigned.");
+            //}
         }
 
-        IEnumerator EnableEndNarrationWithDelay()
+        //IEnumerator EnableEndNarrationWithDelay()
+        //{
+        //    yield return new WaitForSeconds(1.0f);
+        //    //endAudio.Play();
+        //}
+    }
+
+    public IEnumerator MovingPlayer()
+    {
+
+        fade.FadeOut();
+        yield return new WaitForSeconds(2.0f);
+
+        if (hut != null && smallTree != null )
         {
-            yield return new WaitForSeconds(1.0f);
-            //endAudio.Play();
+
+            hut.SetActive(true);
+            squirrelStore.SetActive(true);
+            chainsaw.SetActive(false);
+            cutTrees.SetActive(false);
+            hideAcorns.SetActive(false);
+            smallTree.SetActive(true);
+            Debug.Log("Changed scene with to squirrel base with scene update.");
+
+            //StartCoroutine(EnableEndNarrationWithDelay());
+
+            RenderSettings.skybox = newSkyboxMaterialNormal;
+            DynamicGI.UpdateEnvironment(); // Update the lighting to reflect the new skybox
+            Debug.Log("Normal Skybox changed.");
+
         }
+        else
+        {
+            Debug.LogWarning("SceneChange prefabs not applied in code.");
+
+            Debug.LogWarning("New skybox material is not assigned.");
+        }
+        yield return new WaitForSeconds(0.5f);
+
+        player.transform.position = NPCSpawnPoint.position;
+        player.transform.rotation = NPCSpawnPoint.rotation;
+
+        fade.FadeIn();
     }
 }
