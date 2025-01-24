@@ -11677,12 +11677,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013880418}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.427, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
+  m_LocalPosition: {x: 0, y: 0.07099998, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1688787298}
+  m_Father: {fileID: 1649055404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1013880420
 MonoBehaviour:
@@ -17794,10 +17794,11 @@ Transform:
   m_GameObject: {fileID: 1649055403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71.41, y: 0.082, z: 187.61}
+  m_LocalPosition: {x: 71.41, y: 1.007, z: 187.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1013880419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1649055405
@@ -18113,10 +18114,9 @@ GameObject:
   - component: {fileID: 1688787296}
   - component: {fileID: 1688787295}
   - component: {fileID: 1688787294}
-  - component: {fileID: 1688787300}
   - component: {fileID: 1688787299}
   m_Layer: 0
-  m_Name: HideNuts
+  m_Name: HideAcorn
   m_TagString: Storage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18214,11 +18214,10 @@ Transform:
   m_GameObject: {fileID: 1688787292}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 71.41, y: 0.09099998, z: 187.61}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 71.41, y: 0.09099998, z: 187.58}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1013880419}
   - {fileID: 738662658}
   - {fileID: 1714930213}
   m_Father: {fileID: 0}
@@ -18230,7 +18229,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688787292}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fb03b945548ca85428948431a8475e60, type: 3}
@@ -18243,7 +18242,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.5920181
+  MinDistance: 4.1775513
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -18319,21 +18318,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1688787300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688787292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf79116881cb024aa7969787e30ec69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideAcorn: 5
-  hideAcornStorage: {fileID: 738662659}
-  AcornAudioSource: {fileID: 1688787299}
 --- !u!1 &1714930212
 GameObject:
   m_ObjectHideFlags: 0
