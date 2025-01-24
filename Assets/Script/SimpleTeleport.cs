@@ -7,7 +7,7 @@ public class SimpleTeleport : MonoBehaviour
     public GameObject chainsaw;         //chainsaw gameobject enabling
     public GameObject squirrelStore;       //storage of Scorn for squirrel
 
-    public Material newSkyboxMaterialWinter;    // Skybox material for the new scene
+    //public Material newSkyboxMaterialWinter;    // Skybox material for the new scene
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +17,8 @@ public class SimpleTeleport : MonoBehaviour
             // Teleport the player to the destination
             other.transform.position = teleportDestination.position;
             other.transform.rotation = teleportDestination.rotation;
+
+            //chainsaw.SetActive(true);
 
             // Debug message to confirm the teleportation
             Debug.Log("Player teleported to: " + teleportDestination.position);
