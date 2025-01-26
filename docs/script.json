@@ -1,10 +1,16 @@
 {
     "gameInfo": {
-        "title": "Climate Change VR Game",
-        "description": "Experience nature like never before and learn how small actions can make a big difference."
+        "title": "Through The Eyes",
+        "description": "A VR experience where players explore forest ecosystems as a squirrel and a lumberjack, learning about sustainability and climate change."
     },
     "educationalFacts": [
-        "Forests absorb nearly 2.6 billion tons of carbon dioxide annually.",
-        "Planting trees helps combat climate change and preserve ecosystems."
-    ]
+        "Squirrels bury seeds that grow into trees, aiding forest regeneration.",
+        "Deforestation contributes to nearly 15% of global greenhouse gas emissions.",
+        "Sustainable forestry practices ensure forest preservation and resource renewal."
+    ],
+    "releaseInfo": {
+        "version": "1.0.0",
+        "releaseDate": "2025-01-01",
+        "apkLink": "https://github.com/Surya-veera02/AgricHackathon/releases"
+    }
 }
