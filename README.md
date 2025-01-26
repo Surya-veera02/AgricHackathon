@@ -9,12 +9,12 @@ ThroughTheEyes is a Virtual Reality (VR) game that immerses players in the world
 ## 📸 Screenshots  
 
 ### Squirrel Gameplay  
-![Squirrel Storing Acorns] ![Screenshot 2025-01-26 131139](https://github.com/user-attachments/assets/bc650f07-d4a4-4365-a654-edd64a3db85a)
+![Screenshot 2025-01-26 131139](https://github.com/user-attachments/assets/bc650f07-d4a4-4365-a654-edd64a3db85a)
 
 ---
 
 ### Lumberjack Cutting Trees  
-![Lumberjack Cutting Trees] ![Screenshot 2025-01-26 132056](https://github.com/user-attachments/assets/b6d7cd39-7c7d-42ae-970d-ace57d58de33)
+![Screenshot 2025-01-26 132056](https://github.com/user-attachments/assets/b6d7cd39-7c7d-42ae-970d-ace57d58de33)
 
 
 ---
@@ -41,8 +41,8 @@ ThroughTheEyes is a Virtual Reality (VR) game that immerses players in the world
 
 ## 🔗 External Resources  
 
-- 🎥 [YouTube Trailer]((https://www.youtube.com/watch?v=eVVe0a9YCi0))  
-- 🌐 [Project Webpage]((https://surya-veera02.github.io/AgricHackathon/))  
+- 🎥 [YouTube Trailer](https://www.youtube.com/watch?v=eVVe0a9YCi0)  
+- 🌐 [Project Webpage](https://surya-veera02.github.io/AgricHackathon/)  
 
 ---
 
