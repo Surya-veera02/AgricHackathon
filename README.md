@@ -33,7 +33,7 @@ ThroughTheEyes is a Virtual Reality (VR) game that immerses players in the world
 ## 🚀 Getting Started  
 
 1. **Releases**:  
-   You can download the APK file from the [Releases](https://github.com/yourusername/ForestLife/releases) section.  
+   You can download the APK file from the [Releases](https://github.com/Surya-veera02/AgricHackathon/releases/tag/v1.0) section.  
 2. **Hardware Requirements**:  
    Tested and Compatible with Oculus Quest 3.  
 
