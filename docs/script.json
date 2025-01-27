@@ -6,11 +6,32 @@
     "educationalFacts": [
         "Squirrels bury seeds that grow into trees, aiding forest regeneration.",
         "Deforestation contributes to nearly 15% of global greenhouse gas emissions.",
-        "Sustainable forestry practices ensure forest preservation and resource renewal."
+        "Sustainable forestry practices ensure forest preservation and resource renewal.",
+        "Planting saplings during reforestation increases biodiversity and carbon sequestration.",
+        "Flying squirrels help spread fungi spores, which are vital for forest health."
     ],
     "releaseInfo": {
-        "version": "1.0.0",
-        "releaseDate": "2025-01-01",
-        "apkLink": "https://github.com/Surya-veera02/AgricHackathon/releases"
-    }
+        "version": "1.0.1",
+        "releaseDate": "2025-01-15",
+        "apkLink": "https://github.com/Surya-veera02/AgricHackathon/releases",
+        "updateHighlights": [
+            "Added new levels focused on the lumberjack's sustainable practices.",
+            "Improved visual effects for forest regrowth simulations.",
+            "Enhanced user interface for easier navigation."
+        ]
+    },
+    "gameFeatures": [
+        {
+            "feature": "Immersive VR gameplay",
+            "description": "Experience the forest ecosystem through the eyes of a squirrel or a lumberjack."
+        },
+        {
+            "feature": "Educational Content",
+            "description": "Learn how small behaviors impact forest health and climate change."
+        },
+        {
+            "feature": "Interactive Gameplay",
+            "description": "Participate in activities like burying seeds, cutting trees responsibly, and reforesting."
+        }
+    ]
 }
